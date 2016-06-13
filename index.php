@@ -41,11 +41,17 @@ $num = hexdec($hash);
 $num = intval(round($num / 2.55));
 if ($num === 0) $num++;
 
-// Ensure cached file exists
+// File paths
 $file = $res['w'] . 'x' . $res['h'] . '.jpg';
 $cache = implode(DIRECTORY_SEPARATOR, [__DIR__, 'img', 'cache', $file]);
 $src   = implode(DIRECTORY_SEPARATOR, [__DIR__, 'img', 'src',   $num.'.jpg']);
-while (!file_exists($cache)) copy($src, $cache);
+
+// Ensure cached file exists
+while (!file_exists($cache)) {
+	$img = imagecreatefromjpeg($src);
+	$img = imagescale($img, $res['w'], $res['h']);
+	imagejpeg($img, $cache, 100);
+}
 
 // Serve cached image
 header('Content-type: image/jpeg');
