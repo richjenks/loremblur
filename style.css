@@ -1,0 +1,44 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	background: #ecf0f1;
+}
+
+.container {
+	max-width: 600px;
+	margin: auto;
+}
+
+.content {
+	padding: 0 1em;
+}
+
+h1 {
+	background: #3498db;
+	color: white;
+	margin-top: 0;
+	padding: 1.6em;
+}
+
+h1 b {
+	background: #333;
+	padding: .1em .2em;
+}
+
+code,
+.code {
+	font-family: monospace;
+	font-size: 1.2em;
+	display: block;
+	background: #333;
+	border-radius: .5em;
+	color: white;
+	color: #3498db;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
