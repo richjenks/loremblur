@@ -3,7 +3,7 @@
 /**
  * Loremblur
  *
- * A different kind of placeholder image provider
+ * Neutral and inoffensive coloured placeholder images
  */
 
 // Show welcome page?
